@@ -25,5 +25,5 @@ jobs:
         GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}
       run:
         gcloud auth configue-docker asia-south1-docker.pkg.dev
-        docker build -t asia-south1-docker.pkg.dev/projectsprod-418002/swagger-demo/nginx:latest .
-        docker push asia-south1-docker.pkg.dev/projectsprod-418002/swagger-demo/nginx:latest
+        docker build -t asia-south1-docker.pkg.dev/$GOOGLE_PROJECT/swagger-demo/nginx:latest .
+        docker push asia-south1-docker.pkg.dev/$GOOGLE_PROJECT/swagger-demo/nginx:latest
